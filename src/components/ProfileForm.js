@@ -24,32 +24,38 @@ function ProfileForm({submit}) {
   return (
     <div className='formContainer'>
     <h3>ProfileForm</h3>
+
+
+
     <form>
     <fieldset>
     <legend>Bio Data</legend>
-    <div className='names'>
 
+    <div className='names'>
      <label>
      First Name
-     <input name='firstname' type="text" onChange={handler}/>
-     </label>
-     <label>
+     <input name='firstname' value={Profile.firstname}  onChange={handler} type="firstname"/>
 
+     </label>
+
+     <label>
      last Name
-     <input name='lasttname' type="text" onChange={handler}/>
-     </label>
-     <label>
+     <input name='lastname' value={Profile.lastname}  onChange={handler} type="lastname"/>
 
-     Email
-     <input name='email' type="text" onChange={handler}/>
      </label>
+     </div>
+
+<div className='names'>
+     <label>
+     Email
+     <input name='email' value={Profile.email}  onChange={handler} type="email"/>
+
+     </label>
+
      <label>
      Phone
-     <input name='phone' type="text" onChange={handler}/>
+     <input name='phone' value={Profile.phone}  onChange={handler} type="tel"/>
      </label>
-     
-
-    
     
     </div>
     </fieldset>
